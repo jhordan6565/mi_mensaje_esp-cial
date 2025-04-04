@@ -14,25 +14,104 @@
             background-color: #ffe6e6;
             font-family: Arial, sans-serif;
             text-align: center;
+            padding: 20px;
         }
+
         img {
             width: 200px;
             height: auto;
             border-radius: 10px;
+            animation: fadeIn 2s ease-in-out;
         }
+
         h1 {
             color: #d6336c;
             margin-top: 20px;
+            animation: fadeIn 2s ease-in-out;
         }
+
         p {
             font-size: 18px;
             color: #555;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #d6336c;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #c0265c;
+        }
+
+        #mensajeOculto {
+            display: none;
+            color: #d6336c;
+            font-weight: bold;
+            font-size: 20px;
+            margin-top: 15px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 600px) {
+            img {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            p, button {
+                font-size: 16px;
+            }
+
+            #mensajeOculto {
+                font-size: 18px;
+            }
         }
     </style>
 </head>
 <body>
+
+    <!-- Imagen de rosa -->
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Red_rose.jpg/640px-Red_rose.jpg" alt="Rosa roja">
+    
+    <!-- Título -->
     <h1>Te amo, esposa mía</h1>
+    
+    <!-- Mensaje inicial -->
     <p>De parte de tu esposo ❤️</p>
+
+    <!-- Botón y mensaje oculto -->
+    <button onclick="mostrarMensaje()">Haz clic aquí</button>
+    <p id="mensajeOculto">Eres el amor de mi vida Danielis Maria Silva Medina💖</p>
+
+    <!-- Música de fondo -->
+    <audio autoplay loop>
+        <source src="tu_cancion.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio HTML5.
+    </audio>
+
+    <!-- Script -->
+    <script>
+        function mostrarMensaje() {
+            document.getElementById('mensajeOculto').style.display = 'block';
+        }
+    </script>
 </body>
 </html>
